@@ -6,5 +6,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - 5000:5000
-    volumes:
-      - ./backend:/app
+
+
+  front-end:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
