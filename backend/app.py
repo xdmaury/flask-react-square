@@ -1,7 +1,10 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 from routes.square_route import square_bp
 
 app = Flask(__name__)
+
+CORS(app)
 
 @app.errorhandler(404)
 def page_not_found(error):
